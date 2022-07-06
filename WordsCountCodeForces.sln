@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32407.343
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WordsCountCodeForces", "ConsoleApp4\WordsCountCodeForces.csproj", "{8578005B-47E9-45D9-B88A-C8B76CBEC91A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8578005B-47E9-45D9-B88A-C8B76CBEC91A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8578005B-47E9-45D9-B88A-C8B76CBEC91A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8578005B-47E9-45D9-B88A-C8B76CBEC91A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8578005B-47E9-45D9-B88A-C8B76CBEC91A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {77A2A3EE-A2D0-4884-8CEE-271E7C3431C4}
+	EndGlobalSection
+EndGlobal
