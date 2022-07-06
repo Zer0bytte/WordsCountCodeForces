@@ -32,73 +32,32 @@ namespace ConsoleApp4
 
     class Program
     {
-
-        public static string ReplaceAt(string str, int index, int length, string replace)
-        {
-            return str.Remove(index, Math.Min(length, str.Length - index))
-                    .Insert(index, replace);
-        }
-        static string CleanSpaces(string words)
-        {
-            string CleanedWords = words;
-            for (int letter = 0; letter < CleanedWords.Length; letter++)
-            {
-                if ((char.IsWhiteSpace(words[letter])) && (char.IsWhiteSpace(words[letter + 1])))
-                {
-                    CleanedWords = ReplaceAt(CleanedWords, letter, 1, string.Empty);
-                }
-
-                if (letter == CleanedWords.Length - 1)
-                {
-                    if (char.IsWhiteSpace(words[0]))
-                    {
-                        CleanedWords = ReplaceAt(CleanedWords, 0, 1, string.Empty);
-
-                    }
-
-                }
-            }
-
-
-            return CleanedWords;
-        }
-
-
         static string regexCleanSpaces(string words)
         {
             return Regex.Replace(words, @"\s{1,}", " ");
         }
         static string CleanWords(string words)
         {
-            string CleanedWords = "";
+
             StringBuilder CheckedWords = new StringBuilder();
 
             for (int letter = 0; letter < words.Length; letter++)
             {
                 if (!char.IsPunctuation(words[letter]))
-                {
-
                     CheckedWords.Append(words[letter]);
-
-                }
-
-
             }
-
-
             return regexCleanSpaces(CheckedWords.ToString().Trim());
         }
+
+
+
         static void Main(string[] args)
         {
-
             while (true)
             {
-
                 Console.WriteLine("Enter your words: ");
-
                 string Words = Console.ReadLine();
                 Stopwatch stopwatch = new Stopwatch();
-
                 stopwatch.Start();
                 string CleanedWords = CleanWords(Words.Trim());
                 stopwatch.Stop();
@@ -114,10 +73,7 @@ namespace ConsoleApp4
                     if (cL != 0 && char.IsWhiteSpace(CleanedWords[cL - 1]))
                     {
                         WordsCount++;
-
                     }
-
-
                 }
                 Console.WriteLine($"Words count: {WordsCount + 1 }");
 
@@ -125,6 +81,11 @@ namespace ConsoleApp4
 
         }
 
+
+        /// <summary>
+        /// Hashing the UNique hwid
+        /// </summary>
+        /// <returns></returns>
         static string GetMd5Sum()
         {
             string randomString = Guid.NewGuid().ToString();
